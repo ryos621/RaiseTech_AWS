@@ -59,7 +59,7 @@ VPC内のみ通信が可能
 APサーバの役割を想定して、パブリックサブネットに作成
 ![EC2](img/lecture04/ec2.png)
 ### 2-2.セキュリティグループ
-全てのソースからの、SSH(ポート22)を利用した通信のみ許可するように制御を行っている。
+クライアント端末が接続しているグローバルIPアドレスからの、SSH(ポート22)を利用した通信のみ許可するように制御を行っている。
 ![EC2-セキュリティグループ-インバウンド](img/lecture04/ec2-sg-inbound.png)
 ![EC2-セキュリティグループ-アウトバウンド](img/lecture04/ec2-sg-outbound.png)
 
@@ -81,8 +81,8 @@ DBサーバの役割を想定して、プライベートサブネットに作成
 ### 4-1.SSHを用いた、クライアント端末→EC2の接続
 キーペア秘密鍵を用いて、クライアント端末からEC2にSSH接続
 ```
-$ ssh -i "raisetech.pem" ec2-user@18.176.61.111
-Last login: Thu Apr 10 22:38:01 2025 from kd106133122254.au-net.ne.jp
+ryo@MacBook-Air secret % ssh -i "raisetech.pem" ec2-user@18.181.165.241
+Last login: Mon Apr 14 03:52:52 2025 from kd106146061210.au-net.ne.jp
    ,     #_
    ~\_  ####_        Amazon Linux 2
   ~~  \_#####\
